@@ -155,37 +155,64 @@
 # for i in dict1:
 #     dict[i] = dict.get(i, 0) + 1
 # print(dict)
+#
+# import random
+# #----------------------------------------
+# str = []
+# for i in range(100):
+#     str.append(random.randint(0, 1))
+# print(str.count(1))
+# print(str.count(0))
+# #----------------------------------------
+# num = random.randint(0, 100)
+# while 1:
+#     guess = int(input("plz enter the num:"))
+#     if guess > num:
+#         print("too big")
+#     elif guess < num:
+#         print("too small")
+#     elif guess == num:
+#         break
+# print("correct")
+# #-----------validate ISBN code-----------#
+# ISBN = input("Enter ur ISBN string:")
+# ISBN = ISBN.split('-')
+# ISBN = "".join(ISBN)
+# sum = 0
+# for i in range(12):
+#     if(i % 2 == 0):
+#         sum += 3 * int(ISBN[i])
+#     else: sum += int(ISBN[i])
+# remainder = 10 - sum % 10
+# print(ISBN)
+# if remainder == int(ISBN[11]):
+#     print("correct!")
+# else:
+#     print("Oops!")
+# name = "taltalasuka"
+# print(name[::-1])
 
-import random
-#----------------------------------------
-str = []
-for i in range(100):
-    str.append(random.randint(0, 1))
-print(str.count(1))
-print(str.count(0))
-#----------------------------------------
-num = random.randint(0, 100)
-while 1:
-    guess = int(input("plz enter the num:"))
-    if guess > num:
-        print("too big")
-    elif guess < num:
-        print("too small")
-    elif guess == num:
-        break
-print("correct")
-#-----------validate ISBN code-----------#
-ISBN = input("Enter ur ISBN string:")
-ISBN = ISBN.split('-')
-ISBN = "".join(ISBN)
-sum = 0
-for i in range(12):
-    if(i % 2 == 0):
-        sum += 3 * int(ISBN[i])
-    else: sum += int(ISBN[i])
-remainder = 10 - sum % 10
-print(ISBN)
-if remainder == int(ISBN[11]):
-    print("correct!")
-else:
-    print("Oops!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
