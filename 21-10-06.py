@@ -63,7 +63,7 @@ tuple1 = (1, 3, 5, 7, 9)
 #
 #
 # 3.     Dict    #
-zergling = {'attack' : 5, 'speed' : 4.13, 'price' : 50}
+# zergling = {'attack' : 5, 'speed' : 4.13, 'price' : 50}
 # print(zergling)
 # print(zergling['price'])
 #                                   Error when printing zergling[0]
@@ -92,8 +92,77 @@ zergling = {'attack' : 5, 'speed' : 4.13, 'price' : 50}
 # zergling.update({Germany})
 
 #       dict
-game = "minecraft"
-dict = {}
-for i in game:
-    dict[i] = dict.get(i, 0) + 1
-print(dict)
+# game = "mminecraft"
+# dict = {}
+# dict1 = {}                      # debugging it and u'll know
+# for i in game:
+#     print(i, end = ' ')
+#     dict[i] = dict.get(i, 0) + 1
+#     dict1[i] = dict1.get(i, 1)
+# print(dict)
+# print(dict1)
+#                   Exception
+#
+#
+#
+# try:
+#     with open("file.txt") as file :
+#         print(file.read())
+# except FileNotFoundError :
+#     print("The file is not found :(")
+
+
+
+
+# message1 = "Global Variable"
+# def myFunction():
+#     message1 = "Local Variable"
+#     print("\nINSIDE THE FUNCTION")  #Global variables are accessible inside a function
+#     print (message1)    #Declaring a local variable
+#     # print (message1)    #Calling the function
+# myFunction()
+# print("\nOUTSIDE THE FUNCTION")     #Global variables are accessible outside function
+# print (message1)     #Local variables are NOT accessible outside function.
+
+
+
+
+#If you run the program, you will get the output below.
+# INSIDE THE FUNCTION
+# Global Variable
+# Local Variable
+# OUTSIDE THE FUNCTION
+# Global Variable
+# NameError: name 'message2' is not defined
+
+#1. nonlocal用法
+#
+# count = 1
+#
+# def a():
+#     count = 'a函数里面'
+#     def b():
+#         nonlocal count  # u could try to edit this row
+#         print(count)
+#         count = 2
+#     b()
+#     print(count)
+#
+# if __name__ == '__main__':
+#     a()
+#     print(count)
+#nonlocal只能在封装函数中使用，在外部函数先进行声明，在内部函数进行nonlocal声明
+# 这样在b()函数中的count与a()中的count是同一个变量。
+
+#
+#
+#2.外部函数中变量声明为global
+count = 1
+
+#       **https://blog.csdn.net/lxy210781/article/details/81139493**
+
+
+
+
+if __name__ == "__main__":
+    print("hello world!")

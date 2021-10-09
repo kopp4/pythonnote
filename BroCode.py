@@ -32,12 +32,13 @@ url = 'https://www.youtube.com/watch?v=XKHEtdqhLK8&ab_channel=BroCode'
 #
 #
 # 16. 2D lists
-# drinks = ["coffee", "soda", "tea"]
-# dinner = ["pizze", "hamburger", "hotdog"]
-# dessert = ["cake", "ice cream"]
-# food = [drinks, dinner, dessert]
+drinks = ["coffee", "soda", "tea"]
+dinner = ["pizza", "hamburger", "hotdog"]
+dessert = ["cake", "ice cream"]
+food = [drinks, dinner, dessert]
 # print(food[0][1])
-#
+print([i for e in food for i in e])                             # **ESSENTIAL**
+#                   should've name them rows & columns
 #
 # 17. tuple
 # student = ("Bro", 21, "male")
@@ -49,13 +50,14 @@ url = 'https://www.youtube.com/watch?v=XKHEtdqhLK8&ab_channel=BroCode'
 #     print("Bro is in the tuple")
 #
 #
-#19. set
-utensils = {"fork", "spoon", "knife"}
-for x in utensils:
-    print(x)                # everytime u print the set value is not ordered
+#18. set
+# utensils = {"fork", "spoon", "knife"}
+# for x in utensils:
+#     print(x)                # everytime u print the set value is not ordered
+#
 
 
-
+# 19. dictionaries python
 
 
 
@@ -67,3 +69,104 @@ for x in utensils:
 #         raise Exception("Age must be above 0")
 # except Exception as e:
 #     print(e)
+
+#31.  file detection
+#
+#
+# import os
+# path = "D:\\pythonnote\\hellopython.txt"
+# if os.path.exists(path):
+#     print("location exists")
+#     if os.path.isfile(path):
+#         print("that is a file")
+#     elif os.path.isdir(path):
+#         print("that is a diractory")
+# else:
+#     print("that location doesn't exist")
+#
+#
+#32.                                python read a file
+#
+#
+# with open("hellopython.txt") as file :      # close the file automatically for u
+#     print(file.read())                      # but can't handling exception so we
+#           ||
+#           ||
+#           \/
+# try:
+#     with open("hellopython.txt") as file :
+#         print(file.read())
+# except FileNotFoundError:
+#     print("That file was not found :(")
+#
+#
+#33.                    python write a file
+#
+#
+# text = "\nYoooooooooooooooo\nThis is some text appending"
+# with open("hellopython.txt", "a") as file: # overwrite the file : w
+#     file.write(text)
+#--------------------------------
+#
+#   "r" read
+#   "w" overwrite
+#   "x" write
+#   "a" append
+#   "b" binary
+#   "t" text
+#   "+" used with the method above like "w+" "r+" "a+"
+#       meaning it is editable
+#
+#--------------------------------
+#
+#
+#34.                         python copy a file
+#
+#
+# import shutil
+# shutil.copy("hellopython.txt", "D:\\pythonnote\\file.txt")  # source, distination(src, dst)
+#
+# copyfile() = copies contents of a file
+# copy() = copyfile() + permission mode + destination can be a dir such as "D:\\pythonnote\\new folder"
+# copy2() = copy() + copies metadata (file's creation and modification times)
+#35.                move a file
+#
+#
+# import os
+# src = "hellopython.txt"
+# dst = "D:\\pythonnote\\New Folder\\movedfile.txt"
+# try:
+#     if os.path.exists(dst):
+#         print("already a file")
+#     else:
+#         os.replace(src, dst)
+#         print(src + " was moved")
+# except FileNotFoundError:
+#     print(src + " was not found")
+#
+#
+#36.
+#
+#
+#37.
+#
+#
+#
+#
+#38.
+#
+#
+#
+#
+#39.
+#
+#
+#
+#
+#40.
+#
+#
+#
+#
+
+
