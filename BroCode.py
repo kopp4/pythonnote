@@ -70,7 +70,7 @@ print([i for e in food for i in e])                             # **ESSENTIAL**
 # except Exception as e:
 #     print(e)
 
-#31.  file detection
+#31.                                    file detection
 #
 #
 # import os
@@ -120,7 +120,7 @@ print([i for e in food for i in e])                             # **ESSENTIAL**
 #--------------------------------
 #
 #
-#34.                         python copy a file
+#34.                     python copy a file
 #
 #
 # import shutil
