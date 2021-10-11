@@ -73,10 +73,10 @@ def moveFile():
         print("Oooooooooooooops! Not file is found. QQ")
 #python copy a binary file such as pic or ...
 def copybinaryFile():
-    with open(jpgpath, "rb") as f:
+    with open(jpgpath, "rb") as f:                      # todo  it is RB!!!!!!
         b = f.read()
         copy_f_name = "notanymore.jpg"
-        with open(copy_f_name, "wb") as copy_f:
+        with open(copy_f_name, "wb") as copy_f:         #todo it is WB!!!!
             copy_f.write(b)
             print("Done!wwww")
 
@@ -102,7 +102,7 @@ if __name__ == "__main__":
     # readFile()
     # writeFile()
     #copyFile()
-    # copybinaryFile()
+    copybinaryFile()
     # moveFile()
     # eg4()
     #   Summary : Func is [file.x()]
