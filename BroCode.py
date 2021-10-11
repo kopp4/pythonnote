@@ -16,7 +16,7 @@ url = 'https://www.youtube.com/watch?v=XKHEtdqhLK8&ab_channel=BroCode'
 # print(website[slice])
 
 #                                                   14. loop control statement#
-# phone_number = '123-456-7890'
+phone_number = '123-456-7890'
 # for i in phone_number:
 #     if i == '-':
 #         continue
@@ -30,14 +30,24 @@ url = 'https://www.youtube.com/watch?v=XKHEtdqhLK8&ab_channel=BroCode'
 
 # age = input('Enter your age:')
 #
+#split method (from str to list)
+# print(phone_number.split("-"))
 #
 # 16. 2D lists
-drinks = ["coffee", "soda", "tea"]
-dinner = ["pizza", "hamburger", "hotdog"]
-dessert = ["cake", "ice cream"]
-food = [drinks, dinner, dessert]
-# print(food[0][1])
-print([i for e in food for i in e])                             # **ESSENTIAL**
+
+
+# Using above first method to create a
+# 2D array
+# rows, cols = (5, 5)
+# arr = [[0]*cols]*rows
+# print(arr)
+#
+# drinks = ["coffee", "soda", "tea"]
+# dinner = ["pizza", "hamburger", "hotdog"]
+# dessert = ["cake", "ice cream"]
+# food = [drinks, dinner, dessert]
+# # print(food[0][1])
+# print([rows for column in food for rows in column], end = "")                             # **ESSENTIAL**
 #                   should've name them rows & columns
 #
 # 17. tuple
@@ -133,7 +143,7 @@ print([i for e in food for i in e])                             # **ESSENTIAL**
 #
 #
 # import os
-# src = "hellopython.txt"
+# src = "hellopython.txt"   # U could move a dir too
 # dst = "D:\\pythonnote\\New Folder\\movedfile.txt"
 # try:
 #     if os.path.exists(dst):
@@ -146,6 +156,21 @@ print([i for e in food for i in e])                             # **ESSENTIAL**
 #
 #
 #36.
+#
+#
+# import os
+# import shutil
+# try:
+#     os.remove("file.txt")
+#
+#     #print("The file is moved!")   best do it in the else
+# except FileNotFoundError:
+#     print("Ooops!There is no file exist")
+# except PermissionError:
+#     print("Bro u can't delete a dir im sry")    # can't delete a dir
+# except OSError:
+#     print("u cannt that file using that func")
+
 #
 #
 #37.
@@ -168,5 +193,6 @@ print([i for e in food for i in e])                             # **ESSENTIAL**
 #
 #
 #
+
 
 

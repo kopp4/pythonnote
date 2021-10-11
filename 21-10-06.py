@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 #function嵌套
 # def outer():
 #     def inner():
@@ -32,7 +34,9 @@
 #
 #4TH Data Structure#
 #1. Tuple#
-tuple1 = (1, 3, 5, 7, 9)
+import os
+
+# tuple1 = (1, 3, 5, 7, 9)
 #slice#
 # print(tuple1[0:3])
 # print(tuple1[0:5:2])
@@ -157,12 +161,34 @@ tuple1 = (1, 3, 5, 7, 9)
 #
 #
 #2.外部函数中变量声明为global
-count = 1
+# count = 1
 
 #       **https://blog.csdn.net/lxy210781/article/details/81139493**
 
+# path = "file.txt"
+#
+# def readFile():
+#     try:
+#         with open(path):
+#             print(os.read(path))
+#     except FileNotFoundError:
+#         print("your file is not found")
+#
+#
+# if __name__ == "__main__":
+#     readFile()
+#     # WriteFile()
 
+# open("file.txt", "a")
+#coding = utf-8
 
-
-if __name__ == "__main__":
-    print("hello world!")
+import os
+path = "file.txt"
+try:
+    with open(path, encoding = "utf-8") as file :
+        txt = file.readline()
+        print("Original txt is -->" + txt)
+except FileNotFoundError:
+    print("That file was not found :(")
+txt1 = "2020-11-15"
+txt2 = "上海海洋水族馆"
