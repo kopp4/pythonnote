@@ -182,13 +182,11 @@ import os
 # open("file.txt", "a")
 #coding = utf-8
 
-import os
-path = "file.txt"
-try:
-    with open(path, encoding = "utf-8") as file :
-        txt = file.readline()
-        print("Original txt is -->" + txt)
-except FileNotFoundError:
-    print("That file was not found :(")
-txt1 = "2020-11-15"
-txt2 = "上海海洋水族馆"
+def fibo(n):
+    a, b = 1, 1
+    for i in range(n - 1):
+        a, b = b, a + b
+    return a
+if __name__ == '__main__':
+    n = int(input("Plz enter a number:"))
+    print(fibo(n))
