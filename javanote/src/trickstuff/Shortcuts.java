@@ -8,6 +8,7 @@ public class Shortcuts {
 
 }
 /**
+ * UKW : Alt + Enter
  * Rename : Alt + F6
  * **Correcting** : Alt + Enter
  * Extend selection : after selected : Ctrl + W
