@@ -169,17 +169,51 @@ import re
 #
 #           -=字符串替换=-
 #
-p = r'\d+'
-text = 'AB12CD34EF'
+# p = r'\d+'
+# text = 'AB12CD34EF'
+#
+# repace_text = re.sub(p, ' ', text) # ①
+# print(repace_text)          # AB CD EF
+#
+# repace_text = re.sub(p, '*', text, count=1) # ②
+# print(repace_text)          # AB*CD34EF
+#
+# repace_text = re.sub(p, ' ', text, count=2) # ③
+# print(repace_text)          # AB CD EF
 
-repace_text = re.sub(p, ' ', text) # ①
-print(repace_text)          # AB CD EF
 
-repace_text = re.sub(p, '*', text, count=1) # ②
-print(repace_text)          # AB*CD34EF
+#               -=补充：比较".*"和".*?"的区别。=-
 
-repace_text = re.sub(p, ' ', text, count=2) # ③
-print(repace_text)          # AB CD EF
+# account_content='''我的微博密码是：1234567，QQ密码是：33445566，银行卡密码是：888888，
+#                                 Github密码是：999abc999，帮我记住它们'''
+#
+# account_password=re.findall('密码是：(.*?)，',account_content) # 懒惰模式
+# print('密码是',format(account_password))
+# print(len(account_password))
+#
+# account_password=re.findall('密码是：(.*)，',account_content)
+# print('密码是',format(account_password))
+# print(len(account_password))
+
+#                -=补充：正则表达式re.S的用法=-
+
+# 正则表达式中，“.”的作用是匹配除“\n”以外的任何字符，也就是说，
+# 它是在一行中进行匹配。这里的“行”是以“\n”进行区分的。
+# 如果不使用re.S参数，则只在每一行内进行匹配，如果一行没有，就换下一行重新开始，不会跨行。
+# 而使用re.S参数以后，
+# 正则表达式会将这个字符串作为一个整体，将“\n”当做一个普通的字符加入到这个字符串中，在整体中进行匹配。
+
+# import re
+# a = '''asdfsafhellopass:
+#     234455
+#     worldafdsf
+#     '''
+# b = re.findall('hello(.*?)world',a)
+# c = re.findall('hello(.*?)world',a,re.S)
+# print ('b is ' , b)
+# print ('c is ' , c)
+
+
 
 #
 # --------------------------------------------assignment--------------------------------------------
@@ -201,20 +235,37 @@ print(repace_text)          # AB CD EF
 #
 # print(re.search("QQ密码是：.+", content))
 # #3.
-content = '''
-Python3 高级开发工程师 上海互教教育科技有限公司上海-浦东新区 2万/月 02-18满员
-测试开发工程师（C++/python） 上海墨鹍数码科技有限公司上海-浦东新区 2.5万/每月 02-18未满员
-Python3 开发工程师 上海德拓信息技术股份有限公司上海-徐汇区 1.3万/每月 02-18剩余11人
-测试开发工程师（Python） 赫里普（上海）信息科技有限公司上海-浦东新区 1.1万/每月 02-18剩余5人
-Python高级开发工程师 上海行动教育科技股份有限公司上海-闵行区 2.8万/月 02-18剩余255人
-python开发工程师 上海优似腾软件开发有限公司上海-浦东新区 2.5万/每月 02-18满员
-python开发工程师 上海优乐美软件开发有限公司上海-浦东新区5万/每月 02-18满员
-'''
+# content = '''
+# Python3 高级开发工程师 上海互教教育科技有限公司上海-浦东新区 2万/月 02-18满员
+# 测试开发工程师（C++/python） 上海墨鹍数码科技有限公司上海-浦东新区 2.5万/每月 02-18未满员
+# Python3 开发工程师 上海德拓信息技术股份有限公司上海-徐汇区 1.3万/每月 02-18剩余11人
+# 测试开发工程师（Python） 赫里普（上海）信息科技有限公司上海-浦东新区 1.1万/每月 02-18剩余5人
+# Python高级开发工程师 上海行动教育科技股份有限公司上海-闵行区 2.8万/月 02-18剩余255人
+# python开发工程师 上海优似腾软件开发有限公司上海-浦东新区 2.5万/每月 02-18满员
+# python开发工程师 上海优乐美软件开发有限公司上海-浦东新区5万/每月 02-18满员
+# '''
+#
+# print(re.findall("\d?\.?\d万\/每?月", content))
+#
+# t = re.finditer(r"[\d.]+万/.?月", content)
+# for i in t:
+#     print(i.group(), end = " ")
 
-print(re.findall("\d?\.?\d万\/每?月", content))
-
-t = re.finditer(r"[\d.]+万/.?月", content)
-for i in t:
-    print(i.group(), end = " ")
+# 4.
+# content = "有效用户:\
+# 姓名: 张三\
+# 姓名: 李四\
+# 姓名: 王五\
+# 无效用户:\
+# 姓名: 不知名的小虾米\
+# 姓名: 隐身的张大侠"
+content = '''有效用户:
+姓名: 张三
+姓名: 李四
+姓名: 王五
+无效用户:
+姓名: 不知名的小虾米
+姓名: 隐身的张大侠'''
+print(str(re.findall("有效用户\s?:(.*?)无效用户", content, re.S)).replace("\\n", " "))
 # --------------------------------------------assignment--------------------------------------------
 
