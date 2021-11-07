@@ -111,5 +111,6 @@ if __name__ == "__main__":
 
 #This "decent" amount of codes is driving Linbei CRAZY!!!!!
 #   CURSE U!!!!!!!!!!!!!
-
+# so screwed don't even remember with open file
+# dummy
 
