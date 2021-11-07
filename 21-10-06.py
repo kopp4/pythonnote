@@ -42,7 +42,7 @@ import os
 # print(tuple1[0:5:2])
 # print(tuple1[::-1])
 # print(tuple1[-3:-1])
-#serch 'in'#
+#search 'in'#
 #
 #
 # if 3 in tuple1:
@@ -117,7 +117,6 @@ import os
 
 
 
-
 # message1 = "Global Variable"
 # def myFunction():
 #     message1 = "Local Variable"
@@ -143,18 +142,16 @@ import os
 #
 # count = 1
 #
-# def a():
-#     count = 'a函数里面'
-#     def b():
-#         nonlocal count  # u could try to edit this row
-#         print(count)
-#         count = 2
-#     b()
-#     print(count)
+# def myfunc1():
+#   x = "Bill"
+#   def myfunc2():
+#     nonlocal x
+#     x = "hello"
+#   myfunc2()
+#   return x
 #
-# if __name__ == '__main__':
-#     a()
-#     print(count)
+# print(myfunc1())
+
 #nonlocal只能在封装函数中使用，在外部函数先进行声明，在内部函数进行nonlocal声明
 # 这样在b()函数中的count与a()中的count是同一个变量。
 
@@ -181,12 +178,12 @@ import os
 
 # open("file.txt", "a")
 #coding = utf-8
-
-def fibo(n):
-    a, b = 1, 1
-    for i in range(n - 1):
-        a, b = b, a + b
-    return a
-if __name__ == '__main__':
-    n = int(input("Plz enter a number:"))
-    print(fibo(n))
+#
+# def fibo(n):
+#     a, b = 1, 1
+#     for i in range(n - 1):
+#         a, b = b, a + b
+#     return a
+# if __name__ == '__main__':
+#     n = int(input("Plz enter a number:"))
+#     print(fibo(n))

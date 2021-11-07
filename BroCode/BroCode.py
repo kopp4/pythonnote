@@ -48,7 +48,7 @@ phone_number = '123-456-7890'
 # food = [drinks, dinner, dessert]
 # # print(food[0][1])
 # print([rows for column in food for rows in column], end = "")                             # **ESSENTIAL**
-#                   should've name them rows & columns
+#
 #
 # 17. tuple
 # student = ("Bro", 21, "male")
