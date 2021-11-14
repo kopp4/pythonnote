@@ -24,6 +24,6 @@ public class Shortcuts {
  * **Replace** : Ctrl + R
  * **Bookmark** : Ctrl + F11
  * **Comment** : Ctrl + J
- *
+ * indent : shift + Tab
  * Tooooo much
  */
