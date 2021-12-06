@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/11/28 11:05
 # @Author  : taltalasuka
-# @File    : mysocket.py
+# @File    : socket_server.py
 # @Software: PyCharm
 
 # coding=utf-8 # -*- coding: utf-8 -*-
