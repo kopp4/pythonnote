@@ -1,4 +1,4 @@
-package OSlab.程序1;
+package OSlab.实验5.程序1;
 
 import java.io.*;
 import java.nio.channels.*;

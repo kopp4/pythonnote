@@ -27,4 +27,3 @@ class Test<T>{
         this.test = test;
     }
 }
-// Alt + Enter babe
