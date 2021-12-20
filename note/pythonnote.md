@@ -4,7 +4,7 @@
     
 [列表解析式](https://blog.csdn.net/qq_36759224/article/details/104724999)
 
-#列表list
+# 列表list
     
     1、L.append(object) -> None
     
@@ -54,7 +54,7 @@
     
     此方法会改变列表排序
     
-#元组tuple
+# 元组tuple
     
     1、T.count(A) -> integer
     
@@ -64,7 +64,7 @@
     
     返回A在元祖中第一次出现的位置，可以指定开始和结束范围  注意：[start,end)
     
-    集合set
+# 集合set
     
     1、S.add(element) -> None
     
@@ -142,7 +142,7 @@
     
     返回S和S2(序列或者集合)的并集
     
-#字典dict
+# 字典dict
     
     1、D.clear() -> None
     
@@ -190,7 +190,7 @@
     
     此方法用于创建字典。以可迭代的对象的所有元素作为键，value作为唯一的值。返回一个多键对单一值的字典(不论D是不是空字典结果都是一样的)
     
-#字符串str
+# 字符串str
     
     1、S.capitalize() -> str
     
